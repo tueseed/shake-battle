@@ -11,7 +11,12 @@
     </head>
     <body class="bg-dark">
         <div class="jumbotron text-center">
-            <h1>Shake Battle </h1> 
+            <h1>Shake Battle </h1>
+            <p>
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
+            </div>
+            </p> 
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
