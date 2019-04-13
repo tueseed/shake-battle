@@ -6,10 +6,9 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-
+var ref = firebase.database().ref('room');
 function creat_room()
 {
-    var ref = firebase.database().ref('room');
     ref.push({'dsasd':'deda','dsadwdawd':'dwadwdawd'});
     console.log('creat_room');
 }
