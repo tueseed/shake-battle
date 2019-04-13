@@ -20,7 +20,7 @@ else
 			async: true,
 			cache: false,
 			processData: false,
-			contentType: 'application/x-www-form-urlencoded',
+			contentType: application/x-www-form-urlencoded,
 			success: function(response) {
                         alert('Yes...');
                     }			
