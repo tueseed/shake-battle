@@ -24,7 +24,6 @@ function creat_room()
 }
 function render_card(data)
 {
-    alert(data);
     console.log(Object.keys(data)[0]);
     
 }
