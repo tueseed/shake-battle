@@ -26,7 +26,10 @@ else
   }
   
   $.ajax(settings).done(function (response) {
-    console.log("ID TOKEN นะ..." + response.id_token);
+    var id_token = response.id_token;
+    var base64 = id_token.split('.')[1];
+    var profile = JSON.parse(window.atob(base64));
+    console.log(profile);
   });
 }
 function getUrlVars() {
