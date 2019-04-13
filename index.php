@@ -13,7 +13,7 @@
         <div class="jumbotron text-center">
             <h1>Shake Battle </h1>
             <p>
-            <div class="progress">
+            <div class="progress bg-dark">
                 <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
             </div>
             </p> 
