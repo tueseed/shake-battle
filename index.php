@@ -16,12 +16,12 @@
                 <div class="col-lg-10 text-center">
                     <h1>Shake Battle </h1>
                     <p>
-                        <div class="progress bg-dark">
+                        <div class="progress bg-dark" style="hight:50px">
                             <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
                         </div>
                     </p> 
                 </div>
-                <div class="col-lg-2 text-center">
+                <div class="col-lg-2 text-center mt-2">
                     <img src=""  class="img-profile rounded-circle" id="image" width="150" height="100">
                     <p id="player_name"></p> 
                 </div>
