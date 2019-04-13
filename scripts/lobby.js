@@ -1,4 +1,5 @@
-console.log("okokokok");
+var param = getParams(window.location.href);
+console.log(param);
 var config = {
     apiKey: 'AIzaSyCvnyqJxQ_oEZmESo7JFvYA5OnVLtZIHzE',
     authDomain: 'shake-battle.firebaseapp.com',
