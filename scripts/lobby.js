@@ -28,4 +28,9 @@ function render_card(data)
     var jsondata = JSON.parse(obj);
     alert(jsondata);
     console.log(data);
+    var i = 0 ;
+    while(jsondata[i])
+    {
+        console.log(jsondata[i]);
+    }
 }
