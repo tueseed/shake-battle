@@ -10,7 +10,7 @@
         <script src="scripts/lobby.js"></script>    
     </head>
     <body class="bg-dark">
-        <div class="row">
+        <div class="row" style="margin-top:20px">
             <h1>Shake Battle </h1>
             <p>
             <div class="progress bg-dark">
@@ -18,7 +18,7 @@
             </div>
             </p> 
         </div>
-        <div class="row">
+        <div class="row" style="margin-top:20px">
             <div class="col-lg-12 text-center">
             <input type = "button" class="btn btn-info" value ="สร้างห้อง">
             </div>
