@@ -8,7 +8,11 @@ var config = {
 firebase.initializeApp(config);
 var room = firebase.database().ref('room');
 
-room.on('value',function(snapshot){console.log(snapshot.val());});
+room.on('value',function(snapshot){
+                                    console.log(snapshot.val());
+                                    render_card(snapshot.val());
+                                  }
+                                    );
 
 function creat_room()
 {
@@ -17,4 +21,9 @@ function creat_room()
     var player = firebase.database().ref('room/'+ room_key.key); 
     var player_key = player.push({'playername':'tue','score':'0'});
     console.log('room : ' + room_key.key + '  player' + player_key.key);
+}
+function render_card(data)
+{
+    var obj = JSON.parse(data);
+    console.log(obj);
 }
