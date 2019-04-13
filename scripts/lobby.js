@@ -29,7 +29,7 @@ else
     var id_token = response.id_token;
     var base64 = id_token.split('.')[1];
     var profile = JSON.parse(window.atob(base64));
-    console.log(profile);
+    console.log(profile.name);
   });
 }
 function getUrlVars() {
