@@ -1,5 +1,10 @@
+/////check code ที่ได้จากการ loginผ่าน Line
 var code = getUrlVars()["code"];
 console.log("นี่ code นะ" + code);
+if(code == null)
+{
+  window.location.href = "https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1564476560&redirect_uri=https://shake-battle.herokuapp.com/&state=12345&scope=profile";
+}
 function getUrlVars() {
   var vars = {};
   var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
