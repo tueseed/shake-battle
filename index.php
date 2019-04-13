@@ -10,13 +10,15 @@
         <script src="scripts/lobby.js"></script>    
     </head>
     <body class="bg-dark">
-        <div class="row" style="margin-top:20px">
-            <h1>Shake Battle </h1>
-            <p>
-            <div class="progress bg-dark">
-                <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
+        <div class="container bg-light">
+            <div class="row">
+                <h1>Shake Battle </h1>
+                <p>
+                <div class="progress bg-dark">
+                    <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
+                </div>
+                </p> 
             </div>
-            </p> 
         </div>
         <div class="row" style="margin-top:20px">
             <div class="col-lg-12 text-center">
