@@ -14,13 +14,13 @@ else
   formData.append('client_id','1564476560');
   formData.append('client_secret','1223c4cef0d18aef5762840be1f7bb34');
 	$.ajax({
-			url: 'https://api.line.me/oauth2/v2.1/token',
+      url: 'https://api.line.me/oauth2/v2.1/token',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			method: 'POST',
 			data: formData,
 			async: true,
 			cache: false,
 			processData: false,
-			contentType: false,
 			success: function(response) {
                         alert('Yes...');
                     }			
