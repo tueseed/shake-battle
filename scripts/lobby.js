@@ -8,7 +8,7 @@ if(code == null)
 else 
 {
   var formData = new FormData();
-	formData.append('grant_type',UserID);
+	formData.append('grant_type','authorization_code');
 	formData.append('code',code);
   formData.append('redirect_uri','https://shake-battle.herokuapp.com');
   formData.append('client_id','1564476560');
