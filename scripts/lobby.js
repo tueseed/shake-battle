@@ -25,6 +25,6 @@ function creat_room()
 function render_card(data)
 {
     //var obj = JSON.parse(data);
-    alert(data);
+    alert(data[0][0]);
     console.log(data);
 }
