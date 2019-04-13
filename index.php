@@ -10,7 +10,7 @@
         <script src="scripts/lobby.js"></script>    
     </head>
     <body class="bg-dark">
-        <div class="jumbotron text-center">
+        <div class="row">
             <h1>Shake Battle </h1>
             <p>
             <div class="progress bg-dark">
