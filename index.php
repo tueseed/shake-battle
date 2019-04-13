@@ -13,6 +13,7 @@
             <h1>Shake Battle </h1> 
         </div>
         <div class="row text-center">
+            <input type = "button" class="btn btn-dark" value ="สร้างห้อง">
         </div>
     </body>
 </html>
