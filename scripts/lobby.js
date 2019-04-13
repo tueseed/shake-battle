@@ -16,5 +16,5 @@ function creat_room()
 
     var player = firebase.database().ref('room/'+ room_key.key); 
     var player_key = player.push({'playername':'tue','score':'0'});
-    console.log('room : ' + room_key.key + '  player' + player_key);
+    console.log('room : ' + room_key.key + '  player' + player_key.key);
 }
