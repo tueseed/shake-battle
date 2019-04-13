@@ -9,6 +9,6 @@ firebase.initializeApp(config);
 var ref = firebase.database().ref('room');
 function creat_room()
 {
-    ref.push({'dsasd':'deda','dsadwdawd':'dwadwdawd'});
-    console.log('creat_room');
+   var newroom =  ref.push({'dsasd':'deda','dsadwdawd':'dwadwdawd'});
+    console.log(newroom.key);
 }
