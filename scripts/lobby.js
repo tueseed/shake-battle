@@ -26,7 +26,8 @@ else
   }
   
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    var obj = JSON.parse(response);
+    console.log("ID TOKEN นะ..." + obj.id_token);
   });
 }
 function getUrlVars() {
