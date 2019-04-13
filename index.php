@@ -25,7 +25,7 @@
         </div>
         <div class="row" style="margin-top:20px">
             <div class="col-lg-12 text-center">
-            <input type = "button" class="btn btn-info" value ="สร้างห้อง">
+            <input type = "button" class="btn btn-info" value ="สร้างห้อง" onclick="creat_room()">
             </div>
         </div>
     </body>
