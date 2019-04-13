@@ -13,7 +13,7 @@
     <body class="bg-dark">
         <div class="container-fluid bg-light">
             <div class="row">
-                <div class="col-lg-10 text-center">
+                <div class="col-lg-11 text-center">
                     <h1>Shake Battle </h1>
                     <p>
                         <div class="progress bg-dark">
@@ -21,7 +21,7 @@
                         </div>
                     </p> 
                 </div>
-                <div class="col-lg-2 text-center mt-2">
+                <div class="col-lg-1 text-center mt-2">
                     <img src=""  class="img-profile rounded-circle" id="image" width="50" height="50">
                     <p id="player_name"></p> 
                 </div>
