@@ -13,11 +13,18 @@ else
   formData.append('redirect_uri','https://shake-battle.herokuapp.com');
   formData.append('client_id','1564476560');
   formData.append('client_secret','1223c4cef0d18aef5762840be1f7bb34');
+  var data1 = {
+              'grant_type':'authorization_code',
+              'code':code,
+              'redirect_uri':'https://shake-battle.herokuapp.com',
+              'client_id':'1564476560',
+              'client_secret':'1223c4cef0d18aef5762840be1f7bb34'
+  };
 	$.ajax({
       url: 'https://api.line.me/oauth2/v2.1/token',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			method: 'POST',
-			data: 'grant_type=authorization_code&code='+code+'&redirect_uri=https://shake-battle.herokuapp.com&client_id=1564476560&client_secret=1223c4cef0d18aef5762840be1f7bb34',
+			data:JSON.stringify(data1),
 			success: function(response) {
                         alert('Yes...');
                     }			
