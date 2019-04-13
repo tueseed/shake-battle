@@ -8,7 +8,7 @@ var config = {
 firebase.initializeApp(config);
 var room = firebase.database().ref('room');
 
-//room.on('value',function(snapshot){});
+room.on('value',function(snapshot){console.log(snapshot.val());});
 
 function creat_room()
 {
