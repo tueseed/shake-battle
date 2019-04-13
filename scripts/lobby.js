@@ -24,7 +24,8 @@ function creat_room()
 }
 function render_card(data)
 {
-    //var obj = JSON.parse(data);
-    alert(JSON.stringify(data));
+    var obj = JSON.stringify(data);
+    var jsondata = JSON.parse(obj);
+    alert(jsondata);
     console.log(data);
 }
