@@ -1,12 +1,7 @@
-var code = getUrlVars()["code"];
+var url = window.location.href;
+var code = url.searchParams.get("code");
 console.log(code);
-function getUrlVars() {
-  var vars = {};
-  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-      vars[key] = value;
-  });
-  return vars;
-}
+
 /////////////////////////
 var config = {
     apiKey: 'AIzaSyCvnyqJxQ_oEZmESo7JFvYA5OnVLtZIHzE',
