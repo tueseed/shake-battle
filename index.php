@@ -7,14 +7,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="script/lobby.js"></script>    
+        <script src="scripts/lobby.js"></script>    
     </head>
     <body class="bg-dark">
         <div class="jumbotron text-center">
             <h1>Shake Battle </h1> 
         </div>
-        <div class="row text-center">
-            <input type = "button" class="btn btn-dark" value ="สร้างห้อง">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <input type = "button" class="btn btn-info" value ="สร้างห้อง">
+            </div>
         </div>
     </body>
 </html>
