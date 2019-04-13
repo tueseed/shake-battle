@@ -28,7 +28,7 @@
             <input type = "button" class="btn btn-info" value ="สร้างห้อง" onclick="creat_room()">
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid mt-2">
             <div class="row">
                 <div class="col-lg-3 text-center">
                     <div class="card">
