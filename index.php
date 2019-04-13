@@ -54,6 +54,24 @@
                         <div class="card-body">Content</div> 
                     </div>
                 </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
             </div>
         </div>
     </body>
