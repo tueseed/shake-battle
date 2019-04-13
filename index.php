@@ -22,7 +22,7 @@
                     </p> 
                 </div>
                 <div class="col-lg-2 text-center">
-                    <img src=""  class="img-profile rounded-circle" id="image">
+                    <img src=""  class="img-profile rounded-circle" id="image" width="150" height="100">
                     <p id="player_name"></p> 
                 </div>
             </div>
