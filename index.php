@@ -28,5 +28,33 @@
             <input type = "button" class="btn btn-info" value ="สร้างห้อง" onclick="creat_room()">
             </div>
         </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="card">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div> 
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
