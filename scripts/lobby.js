@@ -5,6 +5,27 @@ if(code == null)
 {
   window.location.href = "https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1564476560&redirect_uri=https://shake-battle.herokuapp.com/&state=12345&scope=profile";
 }
+else 
+{
+  var formData = new FormData();
+	formData.append('grant_type',UserID);
+	formData.append('code',code);
+  formData.append('redirect_uri','https://shake-battle.herokuapp.com');
+  formData.append('client_id','1564476560');
+  formData.append('client_secret','1223c4cef0d18aef5762840be1f7bb34');
+	$.ajax({
+			url: 'https://api.line.me/oauth2/v2.1/token',
+			method: 'POST',
+			data: formData,
+			async: true,
+			cache: false,
+			processData: false,
+			contentType: 'application/x-www-form-urlencoded',
+			success: function(response) {
+                        alert('Yes...');
+                    }			
+			});
+}
 function getUrlVars() {
   var vars = {};
   var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
