@@ -1,8 +1,15 @@
 console.log("okokokok");
 var config = {
-    apiKey: 'AIzaSyC16zgNqr4Tb9rZ86n_Z0Ht6C70Xwc_NGE',
-    authDomain: 'shake-game-bfd34.firebaseapp.com',
-    databaseURL: 'https://shake-game-bfd34.firebaseio.com',
-    projectId: 'shake-game-bfd34',
+    apiKey: 'AIzaSyCvnyqJxQ_oEZmESo7JFvYA5OnVLtZIHzE',
+    authDomain: 'shake-battle.firebaseapp.com',
+    databaseURL: 'https://shake-battle.firebaseio.com',
+    projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
+
+function creat_room()
+{
+    var ref = firebase.database().ref('room');
+    ref.push({'dsasd':'deda','dsadwdawd':'dwadwdawd'});
+    console.log('creat_room');
+}
