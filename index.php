@@ -9,9 +9,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body class="bg-dark">
-        <div class="jumbotron">
-            <h1>Bootstrap Tutorial</h1> 
-            <p>Bootstrap is thedsdsdsdsdadd most popular HTML, CSS...</p> 
+        <div class="jumbotron text-center">
+            <h1>Shake Battle </h1> 
+        </div>
+        <div class="row text-center">
         </div>
     </body>
 </html>
