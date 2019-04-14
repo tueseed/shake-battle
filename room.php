@@ -30,15 +30,15 @@
             <div class="row" id="card_area">
                 <div class="col-lg-12 text-center">
                     <div class="card">
-                        <div class="cars-body">
+                        <div class="cars-body mt-3">
                             <div class="row">                        
                                 <div class="col-lg-1 text-center">
                                     <img src="https://profile.line-scdn.net/0h3CGaBdFLbGx6GEEYmtETO0ZdYgENNmokAnl2Xg8fZ19TIH5vQytzDA0aZwlWLSMzQyohC1cdNQ4E/preview" class="img-profile rounded-circle" id="image" width="50" height="50">
                                     <p>dsfsdvds</p>
                                 </div>
                                 <div class="col-lg-11 text-center">
-                                    <div class="progress bg-dark">
-                                        <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
+                                    <div class="progress bg-dark" style="heoght:50px">
+                                        <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"></div>
                                     </div>
                                 </div>
                             </div>    
