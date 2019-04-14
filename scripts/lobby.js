@@ -36,7 +36,9 @@ else
                                           console.log(profile.name);
                                           console.log(profile.picture);
                                           document.getElementById('image').setAttribute('src',profile.picture);
-                                          document.getElementById('player_name').innerHTML = profile.name
+                                          document.getElementById('player_name').innerHTML = profile.name;
+                                          sessionStorage.setItem('player_name',profile.name);
+                                          sessionStorage.setItem('image',profile.picture);
                                         }		
             });
 }
@@ -78,6 +80,7 @@ function creat_room()
     var player = firebase.database().ref('room/'+ room_key.key); 
     var player_key = player.push({'playername':'tue','score':'0'});
     console.log('room : ' + room_key.key + '  player' + player_key.key);
+    window.location.href= "room.php?room=" + room_key.key ;
 }
 function render_card(room_id,room_num)
 {
