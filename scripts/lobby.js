@@ -58,6 +58,7 @@ firebase.initializeApp(config);
 
 var room = firebase.database().ref('room');
 room.on('value',function(snapshot){
+                                    document.getElementById("card_area").innerHTML = "";
                                     console.log(snapshot.val());
                                     var data = snapshot.val();
                                     var i = 0;
