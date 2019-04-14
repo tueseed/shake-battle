@@ -73,7 +73,7 @@ room.on('value',function(snapshot){
 
 function creat_room()
 {
-    var room_key =  room.push({'0':'0'});
+    var room_key =  room.push();
 
     var player = firebase.database().ref('room/'+ room_key.key); 
     var player_key = player.push({'playername':'tue','score':'0'});
