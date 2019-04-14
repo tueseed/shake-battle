@@ -64,7 +64,7 @@ room.on('value',function(snapshot){
                                     while(Object.keys(data)[i])
                                     {
                                       console.log(Object.keys(data)[i]);
-                                      render_card(Object.keys(data)[i]);
+                                      render_card(Object.keys(data)[i],i);
                                       i++;
                                     }
                                   }
@@ -78,10 +78,10 @@ function creat_room()
     var player_key = player.push({'playername':'tue','score':'0'});
     console.log('room : ' + room_key.key + '  player' + player_key.key);
 }
-function render_card(data)
+function render_card(room_id,room_num)
 {
   console.log('card_render');
   var card = document.getElementById("card_area");
-  card.innerHTML += '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
+  card.innerHTML += '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></div>';   
     
 }
