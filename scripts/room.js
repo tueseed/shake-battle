@@ -1,5 +1,5 @@
 //// เซตรูปภาพกับชื่อ
-console.log(sessionStorage.getItem('image'));
+console.log("รูปภาพ" + sessionStorage.getItem('image'));
 //document.getElementById('image').setAttribute('src',sessionStorage.getItem('image'));
 //document.getElementById('player_name').innerHTML = sessionStorage.getItem('player_name');
 var config = {
@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 
 var room_id = getUrlVars()["room_id"];//รับค่า room_id จาก url ที่ส่งมาจากหน้า lobby
 var cmd = getUrlVars()["cmd"];//รับค่า cmd จาก url ที่ส่งมาจากหน้า lobby
-
+console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
     var player_inroom = snapshot.val();
