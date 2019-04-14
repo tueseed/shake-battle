@@ -31,7 +31,10 @@
                 <div class="col-lg-12 text-center">
                     <div class="card">
                         <div class="cars-body">
-                            
+                            <img src="https://profile.line-scdn.net/0h3CGaBdFLbGx6GEEYmtETO0ZdYgENNmokAnl2Xg8fZ19TIH5vQytzDA0aZwlWLSMzQyohC1cdNQ4E/preview" class="img-profile rounded-circle" id="image" width="50" height="50">
+                            <div class="progress bg-dark">
+                                <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
