@@ -20,7 +20,7 @@ room_ref.on('value',function(snapshot){
 
     alert(Object.values(player_inroom)[0].playername);
     var i = 0;
-    while(Object.keys(player_inroom)[i])
+    while(Object.values(player_inroom)[i].playername)
     {
         cunsole.log(Object.values(player_inroom)[i].playername);
         i++;
