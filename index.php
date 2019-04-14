@@ -34,12 +34,7 @@
         </div>
         <div class="container-fluid mt-2">
             <div class="row" id="card_area">
-                <div class="col-lg-3 text-center mt-2">
-                    <div class="card">
-                        <div class="card-header">Header</div>
-                        <div class="card-body">Content</div> 
-                    </div>
-                </div>
+                <!--พื้นที่ห้อง-->
             </div>
         </div>
     </body>

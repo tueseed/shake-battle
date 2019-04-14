@@ -79,7 +79,7 @@ function render_card(data)
   while(Object.keys(data)[i])
   {
     console.log(Object.keys(data)[i]);
-    card.innerHTML = card.innerHTML + '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
+    card.innerHTML = '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
     i++;
   }
 }
