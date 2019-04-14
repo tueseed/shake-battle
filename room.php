@@ -13,12 +13,7 @@
         <div class="container-fluid bg-light">
             <div class="row">
                 <div class="col-lg-11 text-center">
-                    <h1>Shake Battle </h1>
-                    <p>
-                        <div class="progress bg-dark">
-                            <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
-                        </div>
-                    </p> 
+                    <h1>Battle Room</h1>
                 </div>
                 <div class="col-lg-1 text-center mt-2">
                     <img src="#"  class="img-profile rounded-circle" id="image" width="50" height="50">
@@ -37,7 +32,7 @@
                                     <p>dsfsdvds</p>
                                 </div>
                                 <div class="col-lg-11 text-center">
-                                    <div class="progress bg-dark" style="heoght:50px">
+                                    <div class="progress bg-dark" style="height:50px">
                                         <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"></div>
                                     </div>
                                 </div>
