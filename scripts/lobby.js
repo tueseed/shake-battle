@@ -78,7 +78,7 @@ function creat_room()
     var room_key =  room.push();
 
     var player = firebase.database().ref('room/'+ room_key.key); 
-    var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0'});
+    var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
     window.location.href= "room.php?room_id=" + room_key.key + "&cmd=cr" ;
 }
 function render_card(room_id,room_num)
