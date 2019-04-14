@@ -74,12 +74,12 @@ function creat_room()
 function render_card(data)
 {
   console.log(Object.keys(data)[0]);
-  var card = document.getElementById("card_area").innerHTML;
+  var card = document.getElementById("card_area");
   var i = 0 ;
   while(Object.keys(data)[i])
   {
     console.log(Object.keys(data)[i]);
-    card = card + '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
+    card.innerHTML = card.innerHTML + '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
     i++;
   }
 }
