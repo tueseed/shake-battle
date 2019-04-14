@@ -1,7 +1,7 @@
 //// เซตรูปภาพกับชื่อ
 console.log("รูปภาพ" + sessionStorage.getItem('image'));
-//document.getElementById('image').setAttribute('src',sessionStorage.getItem('image'));
-//document.getElementById('player_name').innerHTML = sessionStorage.getItem('player_name');
+document.getElementById('image').setAttribute('src',sessionStorage.getItem('image'));
+document.getElementById('player_name').innerHTML = sessionStorage.getItem('player_name');
 var config = {
     apiKey: 'AIzaSyCvnyqJxQ_oEZmESo7JFvYA5OnVLtZIHzE',
     authDomain: 'shake-battle.firebaseapp.com',
@@ -16,7 +16,7 @@ console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
     var player_inroom = snapshot.val();
-    console.log(Object.keys(player_inroom));
+    console.log(Object.keys(player_inroom)[0]);
     /*var i = 0;
     while(Object.keys(player_inroom)[i])
     {
