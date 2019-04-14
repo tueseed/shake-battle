@@ -22,7 +22,7 @@ room_ref.on('value',function(snapshot){
     var i = 0;
     while(Object.values(player_inroom)[i].playername)
     {
-        cunsole.log(Object.values(player_inroom)[i].playername);
+        cunsole.log(i);
         i++;
     }
 });
