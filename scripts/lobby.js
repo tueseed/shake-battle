@@ -55,8 +55,8 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-var room = firebase.database().ref('room');
 
+var room = firebase.database().ref('room');
 room.on('value',function(snapshot){
                                     console.log(snapshot.val());
                                     render_card(snapshot.val());
@@ -73,6 +73,12 @@ function creat_room()
 }
 function render_card(data)
 {
-    console.log(Object.keys(data)[0]);
-    
+  console.log(Object.keys(data)[0]);
+  var card = document.getElementById("card_area").innerHTML;
+  var i = 0 ;
+  while(Object.keys(data)[i])
+  {
+    card = card + '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div> </div></div>';   
+    i++;
+  }
 }
