@@ -78,7 +78,8 @@ function render_card(data)
   var i = 0 ;
   while(Object.keys(data)[i])
   {
-    card = card + '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div> </div></div>';   
+    console.log(Object.keys(data)[i]);
+    card = card + '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
     i++;
   }
 }
