@@ -1,6 +1,7 @@
 //// เซตรูปภาพกับชื่อ
-document.getElementById('image').setAttribute('src',sessionStorage.getItem('image'));
-document.getElementById('player_name').innerHTML = sessionStorage.getItem('player_name');
+console.log(sessionStorage.getItem('image'));
+//document.getElementById('image').setAttribute('src',sessionStorage.getItem('image'));
+//document.getElementById('player_name').innerHTML = sessionStorage.getItem('player_name');
 var config = {
     apiKey: 'AIzaSyCvnyqJxQ_oEZmESo7JFvYA5OnVLtZIHzE',
     authDomain: 'shake-battle.firebaseapp.com',
