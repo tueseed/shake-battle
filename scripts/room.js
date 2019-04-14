@@ -16,12 +16,13 @@ console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
     var player_inroom = snapshot.val();
-    var i = 0;
+    console.log(player_inroom);
+    /*var i = 0;
     while(Object.keys(player_inroom)[i])
     {
         cunsole.log(Object.keys(player_inroom)[i]);
         i++;
-    }
+    }*/
 });
 
 
