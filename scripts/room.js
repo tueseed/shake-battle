@@ -1,6 +1,7 @@
 //// เซตรูปภาพกับชื่อ
 console.log("รูปภาพ" + sessionStorage.getItem('image'));
-document.getElementById('image').setAttribute('src',sessionStorage.getItem('image'));
+var picture_url = sessionStorage.getItem("image");
+document.getElementById('image').setAttribute('src',picture_url);
 document.getElementById('player_name').innerHTML = sessionStorage.getItem('player_name');
 var config = {
     apiKey: 'AIzaSyCvnyqJxQ_oEZmESo7JFvYA5OnVLtZIHzE',
