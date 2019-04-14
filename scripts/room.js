@@ -16,16 +16,26 @@ var cmd = getUrlVars()["cmd"];//รับค่า cmd จาก url ที่�
 console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
+    document.getElementById("card_area").innerHTML = "";
     var player_inroom = snapshot.val();
-
-    alert(Object.values(player_inroom)[0].playername);
     var i = 0;
     while(Object.keys(player_inroom)[i])
     {
+        var name = Object.values(player_inroom)[i].playername;
+        var score = Object.values(player_inroom)[i].score;
+        var picture = Object.values(player_inroom)[i].picture
+        render_player(name,score,picture);
         console.log(Object.values(player_inroom)[i].playername);
         i++;
     }
 });
+
+function render_player()
+{
+    var card = document.getElementById("card_area");
+    card.innerHTML += '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></div>';   
+  
+}
 
 
 

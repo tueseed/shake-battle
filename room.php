@@ -28,7 +28,15 @@
         </div>
         <div class="container-fluid mt-2">
             <div class="row" id="card_area">
-                <!--พื้นที่ห้อง-->
+                <div class="col-lg-1 text-center mt-2">
+                    <img src="#"  class="img-profile rounded-circle" id="image" width="50" height="50">
+                    <p id="player_name"></p> 
+                </div>
+                <div class="col-lg-11 text-center">
+                        <div class="progress bg-dark">
+                            <div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:80%"></div>
+                        </div>
+                </div>
             </div>
         </div>
         <script src="scripts/room.js"></script>
