@@ -59,7 +59,14 @@ firebase.initializeApp(config);
 var room = firebase.database().ref('room');
 room.on('value',function(snapshot){
                                     console.log(snapshot.val());
-                                    render_card(snapshot.val());
+                                    var data = snapshot.val();
+                                    var i = 0;
+                                    while(Object.keys(data)[i])
+                                    {
+                                      console.log(Object.keys(data)[i]);
+                                      render_card(Object.keys(data)[i]);
+                                      i++;
+                                    }
                                   }
                                     );
 
@@ -73,13 +80,8 @@ function creat_room()
 }
 function render_card(data)
 {
-  console.log(Object.keys(data)[0]);
+  console.log('card_render');
   var card = document.getElementById("card_area");
-  var i = 0 ;
-  while(Object.keys(data)[i])
-  {
-    console.log(Object.keys(data)[i]);
-    card.innerHTML = '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
-    i++;
-  }
+  card.innerHTML += '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + i + '</div><div class="card-body">รหัสห้อง ' + Object.keys(data)[i] + '</div></div></div>';   
+    
 }
