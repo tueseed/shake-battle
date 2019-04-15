@@ -20,7 +20,7 @@ var cmd = getUrlVars()["cmd"];//รับค่า cmd จาก url ที่�
 console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
-    document.getElementById("card_area").innerHTML = "";
+    document.getElementById("player_area").innerHTML = "";
     var player_inroom = snapshot.val();
     var i = 0;
     while(Object.keys(player_inroom)[i])
@@ -36,7 +36,7 @@ room_ref.on('value',function(snapshot){
 
 function render_player(name,score,picture)
 {
-    var card = document.getElementById("card_area");
+    var card = document.getElementById("player_area");
     card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="' + picture + '" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">' + name + '</p></div><div class="col-lg-11 text-center"><div class="progress bg-light" style="height:50px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"><h1>' +score + '</h1></div></div></div></div>';   
   
 }
