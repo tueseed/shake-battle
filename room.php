@@ -9,7 +9,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>    
     </head>
-    <body class="bg-dark">
+    <body class="bg-dark" onbeforeunload="exit_room()">
         <div class="container-fluid bg-light">
             <div class="row">
                 <div class="col-lg-11 text-center">

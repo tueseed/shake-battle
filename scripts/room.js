@@ -57,4 +57,9 @@ function getUrlVars() {
     return vars;
   }
 
+function exit_room()
+{
+    alert("sadsadas" + room_id);
+}
+
   
