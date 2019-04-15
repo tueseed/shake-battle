@@ -34,10 +34,10 @@ room_ref.on('value',function(snapshot){
     }
 });
 
-function render_player()
+function render_player(name,score,picture)
 {
     var card = document.getElementById("card_area");
-    card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">dsfsdvds</p></div><div class="col-lg-11 text-center"><div class="progress bg-light" style="height:50px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"></div></div></div></div>';   
+    card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="' + picture + '" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">' + name + '</p></div><div class="col-lg-11 text-center"><div class="progress bg-light" style="height:50px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"><h1>' +score + '</h1></div></div></div></div>';   
   
 }
 
