@@ -43,6 +43,7 @@ function render_player(name,score,picture)
 
 function ent_room()
 {
+    var room_ref = firebase.database().ref('room/'+ room_id);
     room_ref.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
 }
 
