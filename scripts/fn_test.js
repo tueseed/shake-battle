@@ -8,7 +8,7 @@ firebase.initializeApp(config);
 function query_data()
 {
     var playersRef = firebase.database().ref("room/");
-    playersRef.orderByChild("Nutthapong").equalTo("Nutthapong").on("child_added", function(data) {
+    playersRef.orderByChild("playername").equalTo("Nutthapong").on("child_added", function(data) {
         console.log("Equal to filter: " + data.val().playername);
      });
 }
