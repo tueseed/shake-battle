@@ -85,6 +85,7 @@ function render_card(room_id,room_num)
 {
   console.log('card_render');
   var card = document.getElementById("card_area");
-  card.innerHTML += '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></div>';   
+  var href = 'https://shake-battle.herokuapp.com/room.php?room_id=' + room_id + '&cmd=ir';
+  card.innerHTML += '<div class="col-lg-3 text-center mt-2"><a href="'+ href +'"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></a></div>';   
     
 }

@@ -56,3 +56,5 @@ function getUrlVars() {
     });
     return vars;
   }
+
+  
