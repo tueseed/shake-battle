@@ -10,7 +10,7 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-var room_id = getUrlVars()["cmd"];
+var cmd = getUrlVars()["cmd"];
 if(cmd == 'ir')
 {
     ent_room();
