@@ -1,4 +1,4 @@
-query_data()
+function query_data()
 {
     alert("asdadsd");
 }
