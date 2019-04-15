@@ -11,12 +11,11 @@ var config = {
 };
 firebase.initializeApp(config);
 var cmd = getUrlVars()["cmd"];
+var room_id = getUrlVars()["room_id"];//รับค่า room_id จาก url ที่ส่งมาจากหน้า lobby
 if(cmd == 'ir')
 {
-    ent_room();
+    ent_room(room_id);
 }
-var room_id = getUrlVars()["room_id"];//รับค่า room_id จาก url ที่ส่งมาจากหน้า lobby
-var cmd = getUrlVars()["cmd"];//รับค่า cmd จาก url ที่ส่งมาจากหน้า lobby
 console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
@@ -41,10 +40,10 @@ function render_player(name,score,picture)
   
 }
 
-function ent_room()
+function ent_room(room_id)
 {
     var room_ref = firebase.database().ref('room/'+ room_id);
-    room_ref.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
+    room_ref.push({'playername':'nuhuhutbgg','score':'0','picture':'https://profile.line-scdn.net/0h3CGaBdFLbGx6GEEYmtETO0ZdYgENNmokAnl2Xg8fZ19TIH5vQytzDA0aZwlWLSMzQyohC1cdNQ4E'});
 }
 
 
