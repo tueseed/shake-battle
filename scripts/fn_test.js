@@ -7,7 +7,7 @@ var config = {
 firebase.initializeApp(config);
 function query_data()
 {
-    var playersRef = firebase.database().ref("room/");
+    var playersRef = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx/-LcWAI8v__j0fKKsVAFr");
     playersRef.orderByChild("playername").equalTo("Nutthapong").on("child_added", function(data) {
         console.log("Equal to filter: " + data.val().playername);
      });
