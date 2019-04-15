@@ -43,7 +43,7 @@ function render_player(name,score,picture)
 
 function ent_room()
 {
-    var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
+    var player_key = room_ref.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
 }
 
 
