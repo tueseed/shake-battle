@@ -10,7 +10,11 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-
+var room_id = getUrlVars()["cmd"];
+if(cmd == 'ir')
+{
+    ent_room();
+}
 var room_id = getUrlVars()["room_id"];//รับค่า room_id จาก url ที่ส่งมาจากหน้า lobby
 var cmd = getUrlVars()["cmd"];//รับค่า cmd จาก url ที่ส่งมาจากหน้า lobby
 console.log('room_id' + room_id);
@@ -33,8 +37,13 @@ room_ref.on('value',function(snapshot){
 function render_player()
 {
     var card = document.getElementById("card_area");
-    card.innerHTML += '<div class="col-lg-3 text-center mt-2"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></div>';   
+    card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">dsfsdvds</p></div><div class="col-lg-11 text-center"><div class="progress bg-light" style="height:50px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"></div></div></div></div>';   
   
+}
+
+function ent_room()
+{
+    var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
 }
 
 
