@@ -38,7 +38,7 @@ room_ref.on('value',function(snapshot){
 function render_player(name,score,picture)
 {
     var card = document.getElementById("player_area");
-    card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="' + picture + '" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">' + name + '</p></div><div class="col-lg-11 text-center"><div class="progress bg-light" style="height:50px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"><h1>' +score + '</h1></div></div></div></div>';   
+    card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="' + picture + '" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">' + name + '</p></div><div class="col-lg-10 text-center"><div class="progress bg-light" style="height:50px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"><h1>' +score + '</h1></div></div></div><div class="col-lg-1 text-center"><input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room()"></div></div>';   
   
 }
 
@@ -61,7 +61,12 @@ function getUrlVars() {
 
 function exit_room()
 {
-    alert("sadsadas" + room_id);
+    var room_id = sessionStorage.getItem('room_id');
+    var player_key = sessionStorage.getItem('player_key');
+    alert(room_id + "   " + player_key);
+    /*var playersdel = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx/-LccXzWxesJY1efCn17O");   
+    playersdel.remove();
+    alert('already del....');*/
 }
 
   
