@@ -13,8 +13,11 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-6 text-center">
                 <input type="button" class="btn btn-success" value="test" onclick="query_data()">
+            </div>
+            <div class="col-lg-6 text-center">
+                <input type="button" class="btn btn-success" value="del" onclick="del_data()">
             </div>
         </div>
     </div>

@@ -16,3 +16,10 @@ function query_data()
         console.log("Equal to filter: " + data.val().picture);
      });
 }
+
+function del_data()
+{
+    var playersdel = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx/-LccXzWxesJY1efCn17O");   
+    playersdel.remove();
+    alert('already del....');
+}
