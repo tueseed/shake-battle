@@ -77,9 +77,15 @@ function getUrlVars() {
 function exit_room(player_key)
 {
     var room_id = sessionStorage.getItem('room_id');
-    //var player_key = sessionStorage.getItem('player_key');
-    //alert(room_id + "   " + player_key);
-    var playersdel = firebase.database().ref("room/"+room_id+"/"+player_key);   
+    var status = sessionStorage.getItem('status');
+    if(status == "owner")
+    {
+        var playersdel = firebase.database().ref("room/"+room_id);
+    }
+    else if(status == "guest")
+    {
+        var playersdel = firebase.database().ref("room/"+room_id+"/"+player_key);
+    }
     playersdel.remove();
     
 }
