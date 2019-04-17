@@ -39,6 +39,8 @@ else
                                           document.getElementById('player_name').innerHTML = profile.name;
                                           sessionStorage.setItem('player_name',profile.name);
                                           sessionStorage.setItem('image',profile.picture);
+                                          sessionStorage.setItem('uid',profile.sub);
+                                          sessionStorage.setItem('email',profile.email);
                                         }		
             });
 }
@@ -80,7 +82,7 @@ function creat_room()
     var room_key =  room.push({'status':'wait'});
 
     var player = firebase.database().ref('room/'+ room_key.key); 
-    var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
+    var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image'),'email':sessionStorage.getItem('email'),'uid':sessionStorage.getItem('uid')});
     sessionStorage.setItem('player_key',player_key);
     window.location.href= "room.php?room_id=" + room_key.key + "&cmd=cr" ;
 }
