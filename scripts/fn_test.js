@@ -8,6 +8,7 @@ firebase.initializeApp(config);
 var playersRef = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx");
 function query_data()
 {
+   console.log(playersRef);
     playersRef.orderByChild("playername").equalTo("Nutthapon").on("child_added", function(data) {
         if(data == "")
         {
