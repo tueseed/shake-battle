@@ -44,7 +44,7 @@ function render_player(name,score,picture,player_key)
     var button = "";
     if(player_status == "owner")
     {
-        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room('+player_key+')">';
+        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room('+"'"+player_key+"'"+')">';
     }
     else if (player_status == "guest" && player_key == player_key1 )
     {
