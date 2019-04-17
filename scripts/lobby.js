@@ -67,7 +67,9 @@ room.on('value',function(snapshot){
                                     while(Object.keys(data)[i])
                                     {
                                       console.log(Object.keys(data)[i]);
+                                      if(Object.value(data)[i] !== "status"){
                                       render_card(Object.keys(data)[i],i);
+                                      }
                                       i++;
                                     }
                                   }
