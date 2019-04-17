@@ -1,7 +1,7 @@
 /////check code ที่ได้จากการ loginผ่าน Line
 var code = getUrlVars()["code"];
 //console.log("นี่ code นะ" + code);
-if(sessionStorage.getItem('player_name') == null)
+if(code == null)
 {
   window.location.href = "https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1564476560&redirect_uri=https://shake-battle.herokuapp.com/&state=12345&scope=openid%20profile%20email";
 }

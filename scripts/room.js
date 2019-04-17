@@ -26,7 +26,7 @@ room_ref.on('value',function(snapshot){
         sessionStorage.removeItem('room_id');
         sessionStorage.removeItem('player_key');
         sessionStorage.removeItem('status');
-        window.location.href="index.php";
+        window.location.href="index.php?code=XXX";
     }
     var i = 0;
     while(Object.keys(player_inroom)[i])
