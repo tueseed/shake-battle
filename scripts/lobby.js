@@ -77,7 +77,7 @@ room.on('value',function(snapshot){
 
 function creat_room()
 {
-    var room_key =  room.push({'status':'wait'});
+    var room_key =  room.push();
 
     var player = firebase.database().ref('room/'+ room_key.key); 
     var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
