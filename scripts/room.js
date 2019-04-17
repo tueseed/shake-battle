@@ -21,6 +21,7 @@ var room_ref = firebase.database().ref('room/'+ room_id);
 room_ref.on('value',function(snapshot){
     document.getElementById("player_area").innerHTML = "";
     var player_inroom = snapshot.val();
+    console.log(snapshot.val());
     var i = 0;
     while(Object.keys(player_inroom)[i])
     {
