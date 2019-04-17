@@ -47,7 +47,7 @@ function ent_room(room_id)
     var room_ref = firebase.database().ref('room/'+ room_id);
     var player_key = room_ref.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image'),'email':sessionStorage.getItem('email'),'uid':sessionStorage.getItem('uid'),'status':'owner'});
     sessionStorage.setItem('player_key',player_key.key);
-    sessionStorage.setItem('room_id',room_key.key);
+    sessionStorage.setItem('room_id',room_id);
 }
 
 
