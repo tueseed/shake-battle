@@ -78,10 +78,10 @@ function exit_room(player_key)
 {
     var room_id = sessionStorage.getItem('room_id');
     //var player_key = sessionStorage.getItem('player_key');
-    alert(room_id + "   " + player_key);
-    /*var playersdel = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx/-LccXzWxesJY1efCn17O");   
+    //alert(room_id + "   " + player_key);
+    var playersdel = firebase.database().ref("room/"+room_id+"/"+player_key);   
     playersdel.remove();
-    alert('already del....');*/
+    
 }
 
   
