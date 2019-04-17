@@ -9,6 +9,10 @@ var playersRef = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx");
 function query_data()
 {
     playersRef.orderByChild("playername").equalTo("Nutthapon").on("child_added", function(data) {
-    console.log("Equal to filter: " + data.val().picture);
+        if(data == null)
+        {
+            alert("null เว้ยยยยย......");
+        }
+        console.log("Equal to filter: " + data.val().picture);
      });
 }
