@@ -77,11 +77,11 @@ room.on('value',function(snapshot){
 
 function creat_room()
 {
-    var room_key =  room.push();
+    var room_key =  room.push({'status':'wait'});
 
     var player = firebase.database().ref('room/'+ room_key.key); 
     var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image')});
-    sessionStorage.set('player_key',player_key);
+    sessionStorage.setItem('player_key',player_key);
     window.location.href= "room.php?room_id=" + room_key.key + "&cmd=cr" ;
 }
 function render_card(room_id,room_num)
