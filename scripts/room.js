@@ -44,7 +44,7 @@ function render_player(name,score,picture,player_key)
     var button = "";
     if(player_status == "owner")
     {
-        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room()">';
+        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room('+player_key+')">';
     }
     else if (player_status == "guest" && player_key == player_key1 )
     {
@@ -74,10 +74,10 @@ function getUrlVars() {
     return vars;
   }
 
-function exit_room()
+function exit_room(player_key)
 {
     var room_id = sessionStorage.getItem('room_id');
-    var player_key = sessionStorage.getItem('player_key');
+    //var player_key = sessionStorage.getItem('player_key');
     alert(room_id + "   " + player_key);
     /*var playersdel = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx/-LccXzWxesJY1efCn17O");   
     playersdel.remove();
