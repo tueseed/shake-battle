@@ -27,8 +27,10 @@ room_ref.on('value',function(snapshot){
         var name = Object.values(player_inroom)[i].playername;
         var score = Object.values(player_inroom)[i].score;
         var picture = Object.values(player_inroom)[i].picture
+        if(Object.keys(player_inroom)[i] !== "status"){
         render_player(name,score,picture);
         console.log(Object.values(player_inroom)[i].playername);
+        }
         i++;
     }
 });
