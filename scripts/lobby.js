@@ -85,6 +85,7 @@ function creat_room()
     var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image'),'email':sessionStorage.getItem('email'),'uid':sessionStorage.getItem('uid'),'status':'owner'});
     sessionStorage.setItem('player_key',player_key.key);
     sessionStorage.setItem('room_id',room_key.key);
+    sessionStorage.setItem('status','owner');
     window.location.href= "room.php?room_id=" + room_key.key + "&cmd=cr" ;
 }
 function render_card(room_id,room_num)
