@@ -21,7 +21,13 @@ var room_ref = firebase.database().ref('room/'+ room_id);
 room_ref.on('value',function(snapshot){
     document.getElementById("player_area").innerHTML = "";
     var player_inroom = snapshot.val();
-    console.log(snapshot.val());
+    if(snapshot.val() == null)
+    {
+        sessionStorage.removeItem('room_id');
+        sessionStorage.removeItem('player_key');
+        sessionStorage.removeItem('status');
+        window.location.href="index.php";
+    }
     var i = 0;
     while(Object.keys(player_inroom)[i])
     {
