@@ -11,6 +11,13 @@
         <script src="scripts/fn_test.js"></script>
 </head>
 <body>
-    <input type="button" class="btn btn-success" value="test" onclick="query_data()">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <input type="button" class="btn btn-success" value="test" onclick="query_data()">
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
