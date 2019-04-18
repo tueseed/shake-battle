@@ -5,15 +5,15 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-var playersRef = firebase.database().ref("room/-LcWAI8s5jus2zXN0YQx");
+var playersRef = firebase.database().ref("room");
+
 function query_data()
 {
-   console.log(playersRef);
-    playersRef.orderByChild("playername").equalTo("Nutthapon").on("child_added", function(data) {
-        if(data == "")
+    playersRef.orderByKey().equalTo("-LcisOdqOgyKNmbUe5t1").on("child_added", function(data) {
+        /*if(data == "")
         {
             alert("null เว้ยยยยย......");
-        }
+        }*/
         console.log("Equal to filter: " + data.val().picture);
      });
 }
