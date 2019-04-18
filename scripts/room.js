@@ -99,7 +99,7 @@ function getUrlVars() {
 function exit_room(player_key)
 {
     var room_id = sessionStorage.getItem('room_id');
-    var playersdel = firebase.database().ref("room/"+room_id+"/"+player_key);
+    var playersdel = firebase.database().ref("room/"+room_id+"/player/"+player_key);
     playersdel.remove();
     
 }
