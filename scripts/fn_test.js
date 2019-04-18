@@ -5,11 +5,11 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-var playersRef = firebase.database().ref("room");
+var playersRef = firebase.database().ref("room/-Lciyuqj4_7BCjWljWW4");
 
 function query_data()
 {
-    playersRef.orderByChild("uid").equalTo("Ua9ba6c25071c19588c095ec147efe2b1").on("value", function(data) {
+    playersRef.orderByChild("uid").equalTo("Ua9ba6c25071c19588c095ec147efe2b1").on('value', function(data) {
         /*if(data == "")
         {
             alert("null เว้ยยยยย......");
