@@ -49,7 +49,7 @@ function render_player(name,score,picture,player_key,player_status_base)//(à¸‚à¹
     var player_key1 = sessionStorage.getItem('player_key');
     var card = document.getElementById("player_area");
     var button = "";
-    if(player_status == "owner")
+    if(player_status == "owner" && player_status_base == "owner")
     {
         var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="owner_exit_room()">';
     }
