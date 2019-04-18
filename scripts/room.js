@@ -44,7 +44,14 @@ room_ref.on('value',function(snapshot){
 });
 
 room_ref.on('child_removed',function(snapshot){
-    console.log(snapshot.key);
+    var player_key = sessionStorage.getItem("player_key");
+    if(snapshot.key == player_key)
+    {
+        sessionStorage.removeItem('room_id');
+        sessionStorage.removeItem('player_key');
+        sessionStorage.removeItem('status');
+        window.location.href="https://shake-battle.herokuapp.com/?code=return";
+    }
 });
 
 function render_player(name,score,picture,player_key,player_status_base)//(ข้อมู,ของแต่ละผู้เล่น)
