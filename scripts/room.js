@@ -78,7 +78,7 @@ function render_player(name,score,picture,player_key,player_status_base)//(à¸‚à¹
 
 function ent_room(room_id)
 {
-    var room_ref = firebase.database().ref('room/'+ room_id);
+    var room_ref = firebase.database().ref('room/'+ room_id+'/player');
     var player_key = room_ref.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image'),'email':sessionStorage.getItem('email'),'uid':sessionStorage.getItem('uid'),'status':'guest'});
     sessionStorage.setItem('player_key',player_key.key);
     sessionStorage.setItem('room_id',room_id);
