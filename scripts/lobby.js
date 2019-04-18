@@ -86,7 +86,7 @@ function creat_room()
 {
     var room_key =  room.push({'status':'wait'});
 
-    var player = firebase.database().ref('room/'+ room_key.key); 
+    var player = firebase.database().ref('room/'+ room_key.key + '/player'); 
     var player_key = player.push({'playername':sessionStorage.getItem('player_name'),'score':'0','picture':sessionStorage.getItem('image'),'email':sessionStorage.getItem('email'),'uid':sessionStorage.getItem('uid'),'status':'owner'});
     sessionStorage.setItem('player_key',player_key.key);
     sessionStorage.setItem('room_id',room_key.key);
