@@ -9,7 +9,7 @@ var playersRef = firebase.database().ref("room");
 
 function query_data()
 {
-    playersRef.orderByChild("/uid").equalTo("Ua9ba6c25071c19588c095ec147efe2b1").once("value", function(data) {
+    playersRef.child().orderByChild("/uid").equalTo("Ua9ba6c25071c19588c095ec147efe2b1").once("value", function(data) {
         /*if(data == "")
         {
             alert("null เว้ยยยยย......");
