@@ -9,9 +9,13 @@ var playersRef = firebase.database().ref("room");
 
 function query_data()
 {
-    playersRef.orderByChild("uid").equalTo("Ua9ba6c25071c19588c095ec147efe2b1",function(data){
-        console.log(data.val());
-    });
+    playersRef.orderByChild("uid").equalTo("Ua9ba6c25071c19588c095ec147efe2b1").once("value", function(data) {
+        /*if(data == "")
+        {
+            alert("null เว้ยยยยย......");
+        }*/
+        console.log("Equal to filter: " + data.val());
+     });
 }
 
 function del_data()
