@@ -33,19 +33,19 @@ room_ref.on('value',function(snapshot){
                                         {
                                             var name = Object.values(player_inroom)[i].playername;
                                             var score = Object.values(player_inroom)[i].score;
-                                            var picture = Object.values(player_inroom)[i].picture
-                                            var player_status = Object.values(player_inroom)[i].status
+                                            var picture = Object.values(player_inroom)[i].picture;
+                                            var player_status = Object.values(player_inroom)[i].status;
                                             if(Object.keys(player_inroom)[i] !== "status"){
-                                            render_player(name,score,picture,Object.keys(player_inroom)[i]);
+                                            render_player(name,score,picture,Object.keys(player_inroom)[i],player_status);
                                             console.log(Object.values(player_inroom)[i].playername);
                                             }
                                             i++;
                                         }
 });
 
-function render_player(name,score,picture,player_key)
+function render_player(name,score,picture,player_key,player_status_base)//(ข้อมู,ของแต่ละผู้เล่น)
 {
-    var player_status = sessionStorage.getItem('status');
+    var player_status = sessionStorage.getItem('status');///สถานะของผู้ที่ login
     var player_key1 = sessionStorage.getItem('player_key');
     var card = document.getElementById("player_area");
     var button = "";
@@ -53,9 +53,13 @@ function render_player(name,score,picture,player_key)
     {
         var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="owner_exit_room()">';
     }
-    else if (player_status == "guest" && player_key == player_key1 )
+    else if(player_status == "owner" && player_status_base =="guest")
     {
         var button = '<input class="btn btn-danger" type="button" value="kick" onclick="exit_room('+"'"+player_key+"'"+')">';
+    }
+    else if (player_status == "guest" && player_key == player_key1 )
+    {
+        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room('+"'"+player_key+"'"+')">';
     }
     card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="' + picture + '" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">' + name + '</p></div><div class="col-lg-10 text-center"><div class="progress bg-light" style="height:40px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"><h1>' +score + '</h1></div></div></div><div class="col-lg-1 text-center">'+button+'</div></div>';   
   
