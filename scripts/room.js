@@ -26,7 +26,7 @@ room_ref.on('value',function(snapshot){
         sessionStorage.removeItem('room_id');
         sessionStorage.removeItem('player_key');
         sessionStorage.removeItem('status');
-        window.location.href="https://shake-battle.herokuapp.com/?code=lsasadsadsdsadasd";
+        window.location.href="https://shake-battle.herokuapp.com/?code=return";
     }
     var i = 0;
     while(Object.keys(player_inroom)[i])
