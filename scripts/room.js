@@ -17,7 +17,7 @@ if(cmd == 'ir')
     ent_room(room_id);
 }
 console.log('room_id' + room_id);
-var room_ref = firebase.database().ref('room/'+ room_id + 'player'); 
+var room_ref = firebase.database().ref('room/'+ room_id + '/player'); 
 room_ref.on('value',function(snapshot){
                                         document.getElementById("player_area").innerHTML = "";
                                         var player_inroom = snapshot.val();
