@@ -14,7 +14,7 @@ function query_data()
         {
             alert("null เว้ยยยยย......");
         }*/
-        console.log("Equal to filter: " + data.val().picture);
+        console.log("Equal to filter: " + data.val());
      });
 }
 
