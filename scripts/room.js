@@ -19,28 +19,28 @@ if(cmd == 'ir')
 console.log('room_id' + room_id);
 var room_ref = firebase.database().ref('room/'+ room_id); 
 room_ref.on('value',function(snapshot){
-    document.getElementById("player_area").innerHTML = "";
-    var player_inroom = snapshot.val();
-    if(snapshot.val() == null)
-    {
-        sessionStorage.removeItem('room_id');
-        sessionStorage.removeItem('player_key');
-        sessionStorage.removeItem('status');
-        window.location.href="https://shake-battle.herokuapp.com/?code=return";
-    }
-    var i = 0;
-    while(Object.keys(player_inroom)[i])
-    {
-        var name = Object.values(player_inroom)[i].playername;
-        var score = Object.values(player_inroom)[i].score;
-        var picture = Object.values(player_inroom)[i].picture
-        var player_status = Object.values(player_inroom)[i].status
-        if(Object.keys(player_inroom)[i] !== "status"){
-        render_player(name,score,picture,Object.keys(player_inroom)[i]);
-        console.log(Object.values(player_inroom)[i].playername);
-        }
-        i++;
-    }
+                                        document.getElementById("player_area").innerHTML = "";
+                                        var player_inroom = snapshot.val();
+                                        if(snapshot.val() == null)
+                                        {
+                                            sessionStorage.removeItem('room_id');
+                                            sessionStorage.removeItem('player_key');
+                                            sessionStorage.removeItem('status');
+                                            window.location.href="https://shake-battle.herokuapp.com/?code=return";
+                                        }
+                                        var i = 0;
+                                        while(Object.keys(player_inroom)[i])
+                                        {
+                                            var name = Object.values(player_inroom)[i].playername;
+                                            var score = Object.values(player_inroom)[i].score;
+                                            var picture = Object.values(player_inroom)[i].picture
+                                            var player_status = Object.values(player_inroom)[i].status
+                                            if(Object.keys(player_inroom)[i] !== "status"){
+                                            render_player(name,score,picture,Object.keys(player_inroom)[i]);
+                                            console.log(Object.values(player_inroom)[i].playername);
+                                            }
+                                            i++;
+                                        }
 });
 
 function render_player(name,score,picture,player_key)
@@ -51,7 +51,7 @@ function render_player(name,score,picture,player_key)
     var button = "";
     if(player_status == "owner")
     {
-        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room('+"'"+player_key+"'"+')">';
+        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="owner_exit_room()">';
     }
     else if (player_status == "guest" && player_key == player_key1 )
     {
@@ -84,17 +84,16 @@ function getUrlVars() {
 function exit_room(player_key)
 {
     var room_id = sessionStorage.getItem('room_id');
-    var status = sessionStorage.getItem('status');
-    if(status == "owner")
-    {
-        var playersdel = firebase.database().ref("room/"+room_id);
-    }
-    else if(status == "guest")
-    {
-        var playersdel = firebase.database().ref("room/"+room_id+"/"+player_key);
-    }
+    var playersdel = firebase.database().ref("room/"+room_id+"/"+player_key);
     playersdel.remove();
     
+}
+
+function owner_exit_room()
+{
+    var room_id = sessionStorage.getItem('room_id');
+    var playersdel = firebase.database().ref("room/"+room_id);
+    playersdel.remove();
 }
 
   
