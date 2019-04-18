@@ -55,7 +55,7 @@ function render_player(name,score,picture,player_key)
     }
     else if (player_status == "guest" && player_key == player_key1 )
     {
-        var button = '<input class="btn btn-danger" type="button" value="Ext.Room" onclick="exit_room('+"'"+player_key+"'"+')">';
+        var button = '<input class="btn btn-danger" type="button" value="kick" onclick="exit_room('+"'"+player_key+"'"+')">';
     }
     card.innerHTML += '<div class="row"><div class="col-lg-1 text-center"><img src="' + picture + '" class="img-profile rounded-circle" id="image" width="50" height="50"><p class="text-primary">' + name + '</p></div><div class="col-lg-10 text-center"><div class="progress bg-light" style="height:40px"><div class="progress-bar bg-info progress-bar-striped" id="progressbar" style="width:50%"><h1>' +score + '</h1></div></div></div><div class="col-lg-1 text-center">'+button+'</div></div>';   
   
