@@ -46,6 +46,7 @@ else if(code !== "return")
 }
 document.getElementById('image').setAttribute('src',sessionStorage.getItem("image"));
 document.getElementById('player_name').innerHTML = sessionStorage.getItem("player_name");
+
 function getUrlVars() {
   var vars = {};
   var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
