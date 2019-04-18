@@ -33,14 +33,15 @@ else if(code !== "return")
                                           var id_token = response.id_token;
                                           var base64 = id_token.split('.')[1];
                                           var profile = JSON.parse(window.atob(base64));
-                                          console.log(profile);
-                                          console.log(profile.picture);
-                                          document.getElementById('image').setAttribute('src',profile.picture);
-                                          document.getElementById('player_name').innerHTML = profile.name;
+                                          //console.log(profile);
+                                          //console.log(profile.picture);
                                           sessionStorage.setItem('player_name',profile.name);
                                           sessionStorage.setItem('image',profile.picture);
                                           sessionStorage.setItem('uid',profile.sub);
                                           sessionStorage.setItem('email',profile.email);
+                                          document.getElementById('image').setAttribute('src',sessionStorage.getItem("image"));
+                                          document.getElementById('player_name').innerHTML = sessionStorage.getItem("player_name");
+                                          
                                         }		
             });
 }
