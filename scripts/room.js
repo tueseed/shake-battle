@@ -43,6 +43,10 @@ room_ref.on('value',function(snapshot){
                                         }
 });
 
+room_ref.on('child_removed',function(snapshot){
+    console.log(snapshot.key);
+});
+
 function render_player(name,score,picture,player_key,player_status_base)//(ข้อมู,ของแต่ละผู้เล่น)
 {
     var player_status = sessionStorage.getItem('status');///สถานะของผู้ที่ login
