@@ -39,6 +39,8 @@ else if(code !== "return")
                                           sessionStorage.setItem('image',profile.picture);
                                           sessionStorage.setItem('uid',profile.sub);
                                           sessionStorage.setItem('email',profile.email);
+                                          document.getElementById('image').setAttribute('src',sessionStorage.getItem("image"));
+                                          document.getElementById('player_name').innerHTML = sessionStorage.getItem("player_name");
                                         }		
             });
 }
