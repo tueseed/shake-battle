@@ -102,8 +102,5 @@ function render_card(room_id,room_num)
   card.innerHTML += '<div class="col-lg-3 text-center mt-2"><a href="'+ href +'"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></a></div>';   
     
 }
-var image = sessionStorage.getItem('image');
-var player_name = sessionStorage.getItem('player_name');
-alert(image + player_name);
 document.getElementById('image').setAttribute('src',sessionStorage.getItem("image"));
 document.getElementById('player_name').innerHTML = sessionStorage.getItem("player_name");
