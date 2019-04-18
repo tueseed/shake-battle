@@ -39,13 +39,9 @@ else if(code !== "return")
                                           sessionStorage.setItem('image',profile.picture);
                                           sessionStorage.setItem('uid',profile.sub);
                                           sessionStorage.setItem('email',profile.email);
-                                          
-                                          
                                         }		
             });
 }
-document.getElementById('image').setAttribute('src',sessionStorage.getItem("image"));
-document.getElementById('player_name').innerHTML = sessionStorage.getItem("player_name");
 
 function getUrlVars() {
   var vars = {};
@@ -63,19 +59,23 @@ var config = {
 };
 firebase.initializeApp(config);
 
+
 var room = firebase.database().ref('room');
 room.on('value',function(snapshot){
                                     document.getElementById("card_area").innerHTML = "";
-                                    console.log(snapshot.val());
-                                    var data = snapshot.val();
-                                    var i = 0;
-                                    while(Object.keys(data)[i])
+                                    if(snapshot.val() !== null)
                                     {
-                                      console.log(Object.keys(data)[i]);
-                                      if(Object.keys(data)[i] !== "status"){
-                                      render_card(Object.keys(data)[i],i);
+                                      console.log(snapshot.val());
+                                      var data = snapshot.val();
+                                      var i = 0;
+                                      while(Object.keys(data)[i])
+                                      {
+                                        console.log(Object.keys(data)[i]);
+                                        if(Object.keys(data)[i] !== "status"){
+                                        render_card(Object.keys(data)[i],i);
+                                        }
+                                        i++;
                                       }
-                                      i++;
                                     }
                                   }
                                     );
@@ -91,6 +91,7 @@ function creat_room()
     sessionStorage.setItem('status','owner');
     window.location.href= "room.php?room_id=" + room_key.key + "&cmd=cr" ;
 }
+
 function render_card(room_id,room_num)
 {
   console.log('card_render');
@@ -99,3 +100,8 @@ function render_card(room_id,room_num)
   card.innerHTML += '<div class="col-lg-3 text-center mt-2"><a href="'+ href +'"><div class="card"><div class="card-header">ห้องที่ ' + room_num + '</div><div class="card-body">รหัสห้อง ' + room_id + '</div></div></a></div>';   
     
 }
+var image = sessionStorage.getItem('image');
+var player_name = sessionStorage.getItem('player_name');
+alert(image + player_name);
+document.getElementById('image').setAttribute('src',sessionStorage.getItem("image"));
+document.getElementById('player_name').innerHTML = sessionStorage.getItem("player_name");
