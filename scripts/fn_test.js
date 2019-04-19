@@ -10,7 +10,7 @@ var player_child = playersRef.child("player");
 
 function query_data()
 {
-    player_child.orderByChild("playername").equalTo("Nutthapong").then("value", function(data) {
+    player_child.orderByChild("playername").equalTo("Nutthapong").once("value", function(data) {
         /*if(data == "")
         {
             alert("null เว้ยยยยย......");
