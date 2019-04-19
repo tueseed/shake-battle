@@ -14,8 +14,8 @@ function query_data()
         {
             alert("null เว้ยยยยย......");
         }*/
-    
-        console.log("Equal to filter: " + data);
+        var da = JSON.stringify(data);
+        console.log("Equal to filter: " + da);
      });
 }
 
