@@ -3,6 +3,7 @@ var code = getUrlVars()["code"];
 //console.log("นี่ code นะ" + code);
 if(code == null)
 {
+  alert("code null");
   window.location.href = "https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1564476560&redirect_uri=https://shake-battle.herokuapp.com/&state=12345&scope=openid%20profile%20email";
 }
 else if(code !== "return") 
@@ -26,6 +27,7 @@ else if(code !== "return")
             statusCode:{
                         400:function()
                             {
+                              alert("400");
                               window.location.href = "https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1564476560&redirect_uri=https://shake-battle.herokuapp.com/&state=12345&scope=openid%20profile%20email";
                             }
                        },
