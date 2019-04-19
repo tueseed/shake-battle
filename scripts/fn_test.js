@@ -5,7 +5,7 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-var playersRef = firebase.database().ref("room").child("player");
+var playersRef = firebase.database().ref("room").chile().child("player");
 
 function query_data()
 {
