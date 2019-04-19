@@ -5,11 +5,11 @@ var config = {
     projectId: 'shake-battle',
 };
 firebase.initializeApp(config);
-var playersRef = firebase.database().ref("room/under/player");
+var playersRef = firebase.database().ref("room");
 
 function query_data()
 {
-    playersRef.orderByChild("playername").equalTo("Nutthapong").once("value", function(data) {
+    playersRef.orderByChild("player").once("value", function(data) {
         /*if(data == "")
         {
             alert("null เว้ยยยยย......");
