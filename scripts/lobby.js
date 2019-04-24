@@ -35,7 +35,7 @@ else if(code !== "return")
                                           var id_token = response.id_token;
                                           var base64 = id_token.split('.')[1];
                                           var profile = JSON.parse(window.atob(base64));
-                                          //console.log(profile);
+                                          console.log(profile);
                                           //console.log(profile.picture);
                                           sessionStorage.setItem('player_name',profile.name);
                                           sessionStorage.setItem('image',profile.picture);
